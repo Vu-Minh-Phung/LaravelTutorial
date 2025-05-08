@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\GreetController;
+use App\Http\Controllers\HelloController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +18,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/xin-chao', function() {
+    return 'Xin chào laravel!';
+});
+
+Route::get('/hello', [HelloController::class, 'index']);
+Route::get('/greet/{name}', [GreetController::class, 'index']);
