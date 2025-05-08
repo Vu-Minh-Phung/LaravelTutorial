@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AboutController;
 use App\Http\Controllers\GreetController;
 use App\Http\Controllers\HelloController;
 use Illuminate\Support\Facades\Route;
@@ -25,3 +26,5 @@ Route::get('/xin-chao', function() {
 
 Route::get('/hello', [HelloController::class, 'index']);
 Route::get('/greet/{name}', [GreetController::class, 'index']);
+
+Route::get('/about', [AboutController::class, 'index']);

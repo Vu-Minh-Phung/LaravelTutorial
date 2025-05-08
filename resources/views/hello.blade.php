@@ -1,9 +1,7 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Hello Page</title>
-</head>
-<body>
-    <h1>Xin chào {{ $ten }}!</h1>
-</body>
-</html>
+@extends('layouts.app')
+
+@section('title', 'Hello Page')
+
+@section('content')
+    <h2>Xin chào {{ $ten }}!</h2>
+@endsection
