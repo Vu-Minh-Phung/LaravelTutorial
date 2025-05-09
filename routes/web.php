@@ -5,6 +5,7 @@ use App\Http\Controllers\FeedbackController;
 use App\Http\Controllers\FormController;
 use App\Http\Controllers\GreetController;
 use App\Http\Controllers\HelloController;
+use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
 use Illuminate\Support\Facades\Route;
 
@@ -40,3 +41,7 @@ Route::post('/feedback', [FeedbackController::class, 'handleForm']);
 
 Route::get('/register', [RegisterController::class, 'showForm']);
 Route::post('/register', [RegisterController::class, 'handleForm']);
+
+Route::get('/login', [LoginController::class, 'showForm']);
+Route::post('/login', [LoginController::class, 'saveForm']);
+Route::get('/login-success', [LoginController::class, 'showName']);
