@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AboutController;
+use App\Http\Controllers\FeedbackController;
 use App\Http\Controllers\FormController;
 use App\Http\Controllers\GreetController;
 use App\Http\Controllers\HelloController;
@@ -32,3 +33,6 @@ Route::get('/about', [AboutController::class, 'index']);
 
 Route::get('/input-name', [FormController::class, 'showForm']);
 Route::post('/input-name', [FormController::class, 'handleForm']);
+
+Route::get('/feedback', [FeedbackController::class, 'showForm']);
+Route::post('/feedback', [FeedbackController::class, 'handleForm']);
