@@ -45,3 +45,4 @@ Route::post('/register', [RegisterController::class, 'handleForm']);
 Route::get('/login', [LoginController::class, 'showForm']);
 Route::post('/login', [LoginController::class, 'saveForm']);
 Route::get('/login-success', [LoginController::class, 'showName'])->middleware('check.login');
+Route::get('/logout', [LoginController::class, 'logout']);

@@ -24,4 +24,9 @@ class LoginController extends Controller
         $name = session('name', 'Guest');
         return view('login-success', ['name' => $name]);
     }
+
+    public function logout() {
+        session()->forget('name');
+        return redirect('/login')->with('success', 'Đăng xuất thành công');
+    }
 }

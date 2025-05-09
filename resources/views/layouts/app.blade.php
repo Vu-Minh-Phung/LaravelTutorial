@@ -8,7 +8,12 @@
 </head>
 <body>
     <header class="header">
-        <h1>Đây là header</h1>
+        <div style="display: flex; justify-content: space-between;">
+            <h1>Đây là header</h1>
+            @if (session()->has('name'))
+                <a href="/logout">Đăng xuất</a>
+            @endif
+        </div>
         <nav>
             <a href="/greet/Laravel">Trang Chào</a> |
             <a href="/about">Giới Thiệu</a>
