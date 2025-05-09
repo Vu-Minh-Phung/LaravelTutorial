@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AboutController;
+use App\Http\Controllers\FormController;
 use App\Http\Controllers\GreetController;
 use App\Http\Controllers\HelloController;
 use Illuminate\Support\Facades\Route;
@@ -28,3 +29,6 @@ Route::get('/hello', [HelloController::class, 'index']);
 Route::get('/greet/{name}', [GreetController::class, 'index']);
 
 Route::get('/about', [AboutController::class, 'index']);
+
+Route::get('/input-name', [FormController::class, 'showForm']);
+Route::post('/input-name', [FormController::class, 'handleForm']);
