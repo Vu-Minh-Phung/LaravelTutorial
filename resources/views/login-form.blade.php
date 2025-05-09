@@ -4,9 +4,6 @@
 
 @section('content')
 <div>
-    @if (session('error'))
-        <div style="color: red">{{ session('error') }}</div>
-    @endif
     <form method="POST" action="/login">
         @csrf
         <label> Tên: </label>

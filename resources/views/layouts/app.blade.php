@@ -16,6 +16,7 @@
     </header>
 
     <main>
+        @include('components.alert')
         @yield('content')
     </main>
 
