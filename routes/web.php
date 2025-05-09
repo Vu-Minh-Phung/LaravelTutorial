@@ -5,6 +5,7 @@ use App\Http\Controllers\FeedbackController;
 use App\Http\Controllers\FormController;
 use App\Http\Controllers\GreetController;
 use App\Http\Controllers\HelloController;
+use App\Http\Controllers\RegisterController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -36,3 +37,6 @@ Route::post('/input-name', [FormController::class, 'handleForm']);
 
 Route::get('/feedback', [FeedbackController::class, 'showForm']);
 Route::post('/feedback', [FeedbackController::class, 'handleForm']);
+
+Route::get('/register', [RegisterController::class, 'showForm']);
+Route::post('/register', [RegisterController::class, 'handleForm']);
