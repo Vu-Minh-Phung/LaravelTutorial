@@ -7,6 +7,7 @@ use App\Http\Controllers\GreetController;
 use App\Http\Controllers\HelloController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\UserCustomController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -46,3 +47,7 @@ Route::get('/login', [LoginController::class, 'showForm']);
 Route::post('/login', [LoginController::class, 'saveForm']);
 Route::get('/login-success', [LoginController::class, 'showName'])->middleware('check.login');
 Route::get('/logout', [LoginController::class, 'logout']);
+
+Route::get('users', [UserCustomController::class, 'index']);
+Route::get('users/create', [UserCustomController::class, 'showForm']);
+Route::post('users/create', [UserCustomController::class, 'saveForm']);
